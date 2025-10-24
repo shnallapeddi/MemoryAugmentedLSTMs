@@ -7,3 +7,7 @@ State-of-the-art sentiment analysis models like e.g., Transformer-based models i
 ### Results
 Memory on Demand is a few shot sentiment analysis system that combines a lightweight bi directional LSTM (two layers, 256 units per direction) with an external differentiable key value memory bank. Trained meta episodically on five-shot support and query splits, the Memory LSTM achieves 93.75 percent in-domain five-shot accuracy, matching a DistilBERT-based ProtoNet at 91.3 percent while using only 1.7 million parameters versus 22.7 million and delivering roughly 0.002 seconds per sample inference. It also generalizes strongly out of distribution, scoring 76.3 percent accuracy on held-out IMDB, and exhibits minimal catastrophic forgetting a 1.75 percentage-point gain after sequential fine-tuning compared to a 16 percentage-point drop for a vanilla LSTM. Paired t tests (p < 0.0001) and comparisons to ProtoNet (60 percent) and NNShot (51 percent) confirm its statistical robustness and efficiency. The full system : transformer, vanilla LSTM, and Memory LSTM baselines is publicly deployed at 
 https://huggingface.co/spaces/snallapeddi/fewShotSentimentAnalyser
+
+
+### Note: 
+Please note that this is an ongoing research project. We are continuously refining the model to enhance its efficiency and validating its performance across additional data sources.
